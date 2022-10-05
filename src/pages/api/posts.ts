@@ -1,10 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { Article } from '../types'
+import { ApiResponse, Article } from '../../types'
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Article[]>
+  res: NextApiResponse<ApiResponse<Article[]>>
 ) {
 
   const mockData: Article[] = [
@@ -23,5 +23,9 @@ export default function handler(
       article_link: "https://www.benmvp.com/blog/mock-all-functions-module-except-one-jest/",
     },
   ]
-  res.status(200).json(mockData)
+  res.status(200).json({
+    success: true,
+    message: "",
+    data: mockData
+  })
 }

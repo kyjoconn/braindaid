@@ -1,3 +1,10 @@
+export interface ApiResponse<Resource> {
+    success: boolean;
+    message: string;
+    data: Resource;
+}
+
+
 export interface Article {
     uuid: string;
     title: string;
