@@ -1,0 +1,19 @@
+.topNav {
+    height: 100px;
+    width: 100%;
+    padding: 8px 32px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9; 
+}
+
+.pageContainer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: 540px) {
+    .topNav {
+        padding: 4px 8px;
+    }
+}

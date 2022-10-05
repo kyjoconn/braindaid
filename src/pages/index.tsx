@@ -1,13 +1,19 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css"
+import WithHeader from '../layouts/WithHeader/WithHeader'
 
-const Home: NextPage = () => {
+function Home() {
   return (
     <div className={styles.container}>
-      we've done it lads
+      we have done it lads
     </div>
+  )
+}
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <WithHeader>
+      {page}
+    </WithHeader>
   )
 }
 
