@@ -4,7 +4,7 @@ import style from "./ArticleCard.module.css";
 
 const ArticleCard = ({article}: {article: Article}) => {
     return (
-        <div className={style.article} key={article.uuid}>
+        <div className={style.article}>
             <p>From {article.source}</p>
             <a href={article.article_link}>
                 <h3>{article.title}</h3>

@@ -24,7 +24,7 @@ const ArticleList = () => {
                 {
                     articles.map((article, i) => {
                         return (
-                            <ArticleCard article={article} />
+                            <ArticleCard key={article.uuid} article={article} />
                         )    
                     })
                 }
